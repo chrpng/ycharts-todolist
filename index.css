@@ -43,7 +43,7 @@ input {
 
 main {
 	background: white;
-	padding: 4px;
+	padding: 8px;
 	display: flex;
 	flex-flow: column;
 }
@@ -109,6 +109,12 @@ ul.todos {
 
 .todo-check-circle:hover {
 	background-color: rgb(233, 233, 233);
+}
+
+.todos-empty {
+	margin: 0 4px 4px 4px;
+	color: rgb(189, 189, 189);
+	font-style: italic;
 }
 
 /* Todos done logic */

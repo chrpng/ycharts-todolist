@@ -1,5 +1,5 @@
 import TodoListModule from './TodoListModule.js'
-import render from './render.js'
+import renderTodos from './render.js'
 
 const isBlank = (value) => {
 	let regex = /^ *$/
@@ -29,12 +29,12 @@ const eventHandlers = () => {
 			return
 		}
 
-		const todolist = TodoListModule.getTodoList()
-		todolist.addTodo(newTodoNameValue)
+		const todoList = TodoListModule.getTodoList()
+		todoList.addTodo(newTodoNameValue)
 		TodoListModule.saveToStorage()
 
 		newTodoName.value = null
-		render.renderTodos(todosContainer)
+		renderTodos(todosContainer)
 	}
 
 	return { submitTodoForm }

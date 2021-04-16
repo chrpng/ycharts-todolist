@@ -10,20 +10,26 @@ class Todo {
 	}
 }
 
-class TodoList {
-	constructor(todos = []) {
-		this.todos = todos.map(todo => {
-			return new Todo(todo.name, todo.id, todo.done)
-		})
-	}
+const TodoList = (todos = []) => {
+	todos = todos.map(todo => {
+		return new Todo(todo.name, todo.id, todo.done)
+	})
 
-	addTodo = (...args) => {
+	const getTodos = () => todos
+
+	const addTodo = (...args) => {
 		const newTodo = new Todo(args)
-		this.todos.push(newTodo)
+		todos = [ ...todos, newTodo ]
 	}
 
-	deleteTodo = (id) => {
-		this.todos = this.todos.filter(todo => todo.id !== id)
+	const deleteTodo = (id) => {
+		todos = todos.filter(todo => todo.id !== id)
+	}
+
+	return {
+		getTodos,
+		addTodo,
+		deleteTodo
 	}
 }
 
@@ -50,6 +56,7 @@ const TodoListModule = (function() {
 			},
 			{
 				name: 'Done Todo',
+				id: '2',
 				done: true
 			},
 			{
@@ -68,13 +75,14 @@ const TodoListModule = (function() {
 		]
   }
 
-  todolist = new TodoList(todolist)
+  todolist = TodoList(todolist)
+	console.log(todolist)
 
   const saveToStorage = () => {
     if (localStorageTest) {
       localStorage.setItem(
         LOCAL_STORAGE_TODOLIST,
-        JSON.stringify(todolist.todos)
+        JSON.stringify(todolist.getTodos())
       )
     }
   }

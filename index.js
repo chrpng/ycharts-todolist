@@ -1,5 +1,5 @@
 import eventHandlers from './helpers/eventHandlers.js'
-import render from './helpers/render.js'
+import renderTodos from './helpers/render.js'
 
 const { submitTodoForm } = eventHandlers()
 
@@ -9,4 +9,4 @@ addTodoBtn.addEventListener('click', submitTodoForm)
 // Initial Render
 
 const todosContainer = document.querySelector('.todos')
-render.renderTodos(todosContainer)
+renderTodos(todosContainer)
