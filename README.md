@@ -37,15 +37,15 @@ Right click and select `Open with Live Server`, or click `Go Live` in the bottom
 
 ## Files
 .
-+-- _helpers
-|   +-- eventHandlers.js
-|   +-- render.js
-|   +-- TodoListModule.js
-+-- reset.css
-+-- index.css
-+-- index.html
-+-- index.js
-+-- README.md
+├── helpers
+│   ├── eventHandlers.js
+│   ├── render.js
+│   └── TodoListModule.js
+├── reset.css
+├── index.css
+├── index.html
+├── index.js
+└── README.md
 
 ## Credits
 
