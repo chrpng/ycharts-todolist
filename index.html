@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="index.css">
+	<script type="module" src="helpers/TodoListModule.js" defer></script>
+	<script type="module" src="helpers/eventHandlers.js" defer></script>
+	<script type="module" src="helpers/render.js" defer></script>
+	<script type="module" src="index.js" defer></script>
+	<title>To-Do List</title>
+</head>
+
+<body>
+	<div id="root">
+		<nav>
+			<h1>
+				<span>todo</span>list
+			</h1>
+		</nav>
+		<main>
+			<form class="new-todo-form">
+				<fieldset>
+					<input type="text" placeholder="Type your todo here" class="new-todo-name">
+				</fieldset>
+				<button class="add-todo-btn">+ Add</button>
+			</form>
+			<ul class="todos">
+				<li class="todo-item">
+					<span class="todo-check-circle"></span>
+					<span class="todo-name">Example Todo when Javascript isn't working at all</span>
+					<button class="todo-delete-btn">x</button>
+				</li>
+			</ul>
+		</main>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+body {
+	font-family: 'Lucida Sans', Verdana, sans-serif;
+	background-color: rgb(139, 226, 241);
+}
+
+#root {
+	width: 960px;
+	margin: 48px auto;
+}
+
+nav {
+	height: 50px;
+	display: flex;
+	align-items: flex-end;
+}
+
+/* Individual Elements */
+
+h1 {
+	color: rgb(84, 82, 102);
+	font-size: 2rem;
+	font-weight: 700;
+	margin-left: 20px;
+	margin-bottom: 8px;
+}
+
+h1 span {
+	color: rgb(255, 255, 255);
+}
+
+h3 {
+	font-size: 1.6rem;
+	font-weight: 700;
+	padding: 20px;
+	color: rgb(84, 82, 102);
+	background: rgb(248, 247, 235);
+}
+
+input {
+	padding: 8px;
+	margin-bottom: 8px;
+}
+
+main {
+	background: white;
+	padding: 4px;
+	display: flex;
+	flex-flow: column;
+}
+
+button {
+	background-color: transparent;
+	border: 1px solid gray;
+	padding: 8px;
+	transition: all 0.2s ease-out;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: rgb(218, 255, 197);
+	color: rgb(11, 165, 75);
+	border-color: rgb(11, 165, 75);
+}
+
+button.todo-delete-btn {
+	padding: 4px;
+}
+button.todo-delete-btn:hover {
+	background-color: rgb(255, 197, 210);
+	color: rgb(209, 14, 14);
+	border-color: rgb(209, 14, 14);
+}
+
+/* Form */
+
+.new-todo-name {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.add-todo-btn {
+	margin-left: 40px;
+}
+
+/* To-dos */
+
+ul.todos {
+	list-style-type: none;
+	padding: 8px 0;
+	max-height: 480px;
+	overflow-y: auto;
+}
+
+.todo-item {
+	display: grid;
+	grid-gap: 8px;
+	grid-template-columns: 24px 1fr 24px;
+	padding: 4px 8px;
+	align-items: center;
+}
+
+.todo-check-circle {
+	border: 1px solid black;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.todo-check-circle:hover {
+	background-color: rgb(233, 233, 233);
+}
+
+/* Todos done logic */
+
+.done {
+	color: gray;
+}
+
+.done .todo-check-circle {
+	text-align: center;
+	border-color: gray;
+}
+
+.done .todo-check-circle:after {
+	position: relative;
+	top: 2px;
+	content: "\2713"
+}
+
+.done .todo-name {
+	text-decoration: line-through;
+}
