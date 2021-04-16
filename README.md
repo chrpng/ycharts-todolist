@@ -21,12 +21,18 @@ I used a combination of IIFEs and classes. I used IIFEs to emulate privacy/encap
 
 **Linux/MacOS**
 
-Navigate to the directory where this is stored, and run `python3 -m http.server` in terminal
+In terminal:
+`git clone https://github.com/chrpng/ycharts-todolist.git`
+`cd ycharts-todolist`
+`python3 -m http.server`
 By default, view at http://localhost:8000/
 
 **Windows**
 
-Navigate to the directory where this is stored, and run `python.exe -m http.server` in terminal
+In terminal:
+`git clone https://github.com/chrpng/ycharts-todolist.git`
+`cd ycharts-todolist`
+`python.exe -m http.server`
 By default, view at http://localhost:8000/
 
 **With VSCode**
