@@ -17,7 +17,10 @@ Python 3.6 or later
 
 I used a combination of IIFEs and classes. I used IIFEs to emulate privacy/encapsulation, and I used classes for readability and where I felt privacy was unneeded due to higher order factory functions/IIFEs already providing it.
 
+
 ## Setup
+
+[**Demo**](https://chrpng.github.io/ycharts-todolist/)
 
 **Linux/MacOS**
 
